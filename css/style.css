@@ -1,0 +1,235 @@
+/*------font-family: "MyriadProRegular";------*/
+@font-face {
+    font-family: "MyriadProRegular";
+    src: url("../fonts/MyriadProRegular/MyriadProRegular.eot");
+    src: url("../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"),
+    url("../fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5% /* ~10px */
+}
+
+body {
+  height: 2000px;
+  font-family: 'MyriadProRegular', 'Arial', 'Tahoma', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  font-weight: normal;
+  background-color: #fff;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 562px;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+
+/*------tabs------*/
+.tab {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 522px;
+  padding: 40px 30px;
+  border: 2px solid #000;
+}
+
+.tab:first-of-type {
+  position: relative;
+  background-color: #ebebeb;
+  z-index: 3;
+}
+
+.tab:nth-child(2) {
+  top: 20px;
+  left: 20px;
+  background-color: #cccccc;
+  z-index: 2;
+}
+
+.tab:last-child {
+  top: 40px;
+  left: 40px;
+  background-color: #acacac;
+  z-index: 1;
+}
+
+/*------elements inside each tab------*/
+.tab__intro {
+  margin-bottom: 20px;
+}
+
+.tab__intro:after {
+  content: '';
+  clear: both;
+  display: block;
+  height: 0;
+}
+
+.tab__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 2.4rem;
+}
+
+.tab__title--jokes {
+  font-size: 1.8rem;
+}
+
+.tab__img:first-of-type {
+  float: left;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.tab__img:last-of-type {
+  float: right;
+}
+
+.tab__desc {
+  margin: 0;
+}
+
+.tab__desc:first-of-type {
+  margin-bottom: 20px;
+}
+
+.tab__footer {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.tab__footer p {
+  margin: 0;
+}
+
+/*------list with jokes------*/
+.tab__list {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  list-style: none;
+}
+
+.tab__list:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.tab__joke {
+  margin-bottom: 15px;
+}
+
+.tab__joke img {
+  display: block;
+}
+
+.tab__joke:first-of-type,
+.tab__joke:nth-of-type(3) {
+  float: left;
+}
+
+.tab__joke:nth-of-type(2),
+.tab__joke:last-of-type {
+  float: right;
+}
+
+/*------notes for every tab------*/
+.tab__note {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 110px;
+  height: 36px;
+  border: 2px solid #000;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.tab__note--first {
+  right: -80px;
+  background-color: #f68e56;
+}
+
+.tab__note--second {
+  right: -48px;
+  background-color: #39b54a;
+}
+
+.tab__note--third {
+  right: -16px;
+  background-color: #00aeef;
+}
+
+/*------share------*/
+.share {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  padding-bottom: 15px;
+  border: 1px solid #000;
+  background-color: #fbaf5d;
+  z-index: 5;
+}
+
+.share__title {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.share__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.share__list:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.share__list-item {
+  float: left;
+}
+
+.share__list-item:nth-child(2) {
+  margin: 0 10px;
+}
+
+.share__list-link {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+.share__list-link:hover {
+  box-shadow: 0px 0px 15px -1px rgba(255, 255, 255, 0.8);
+}
+
+.share__list-link--facebook {
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20112.196%20112.196%22%20width%3D%2220%22%20height%3D%2220%22%3E%0A%20%20%3Ccircle%20cx%3D%2256.098%22%20cy%3D%2256.098%22%20r%3D%2256.098%22%20fill%3D%22%233B5998%22/%3E%0A%20%20%3Cpath%20d%3D%22M70.2%2058.294H60.19v36.672H45.026V58.294h-7.213V45.406h7.213v-8.34c0-5.964%202.833-15.303%2015.3-15.303l11.235.047v12.51h-8.15c-1.338%200-3.218.668-3.218%203.513v7.585h11.334L70.2%2058.294z%22%20fill%3D%22%23FFF%22/%3E%0A%3C/svg%3E%0A');
+}
+
+.share__list-link--twitter {
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2049.652%2049.652%22%3E%0A%20%20%3Cpath%20d%3D%22M24.825%2029.796c2.74%200%204.972-2.23%204.972-4.97%200-1.082-.354-2.08-.94-2.897-.903-1.253-2.37-2.074-4.03-2.074-1.658%200-3.125.82-4.03%202.072-.588.816-.94%201.815-.94%202.897-.003%202.74%202.228%204.97%204.968%204.97zM35.678%2018.746V13.96l-.623.002-4.164.013.017%204.787%22/%3E%0A%20%20%3Cpath%20d%3D%22M24.826%200C11.136%200%200%2011.137%200%2024.826c0%2013.688%2011.137%2024.826%2024.826%2024.826%2013.688%200%2024.826-11.138%2024.826-24.826C49.652%2011.136%2038.516%200%2024.826%200zm14.12%2021.93v11.56c0%203.01-2.45%205.457-5.458%205.457H16.164c-3.01%200-5.457-2.447-5.457-5.458V16.164c0-3.01%202.447-5.457%205.457-5.457h17.323c3.01%200%205.458%202.447%205.458%205.457v5.764z%22/%3E%0A%20%20%3Cpath%20d%3D%22M32.55%2024.826c0%204.257-3.465%207.723-7.724%207.723-4.26%200-7.722-3.467-7.722-7.724%200-1.024.204-2.003.568-2.897h-4.215v11.56c0%201.493%201.213%202.703%202.706%202.703h17.323c1.49%200%202.706-1.21%202.706-2.704V21.93h-4.217c.367.893.574%201.872.574%202.896z%22/%3E%0A%3C/svg%3E%0A');
+}
+
+.share__list-link--instagram {
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20112.197%20112.197%22%20width%3D%2220%22%20height%3D%2220%22%3E%0A%20%20%3Ccircle%20cx%3D%2256.099%22%20cy%3D%2256.098%22%20r%3D%2256.098%22%20fill%3D%22%2355ACEE%22/%3E%0A%20%20%3Cpath%20d%3D%22M90.46%2040.316c-2.403%201.066-4.99%201.787-7.7%202.11%202.768-1.66%204.893-4.285%205.896-7.418-2.59%201.537-5.462%202.652-8.515%203.253-2.445-2.604-5.93-4.232-9.79-4.232-7.403%200-13.408%206.005-13.408%2013.41%200%201.05.12%202.073.35%203.055-11.145-.56-21.026-5.897-27.64-14.012-1.154%201.98-1.816%204.286-1.816%206.743%200%204.65%202.37%208.757%205.965%2011.16-2.196-.068-4.265-.67-6.072-1.678v.17c0%206.497%204.623%2011.916%2010.756%2013.147-1.124.308-2.31.47-3.532.47-.866%200-1.705-.082-2.523-.238%201.705%205.326%206.656%209.203%2012.525%209.312-4.59%203.597-10.37%205.74-16.655%205.74-1.08%200-2.15-.063-3.197-.188%205.93%203.806%2012.98%206.025%2020.553%206.025%2024.664%200%2038.152-20.432%2038.152-38.153%200-.58-.013-1.16-.04-1.734%202.623-1.89%204.896-4.25%206.693-6.94z%22%20fill%3D%22%23F1F2F2%22/%3E%0A%3C/svg%3E%0A');
+}
